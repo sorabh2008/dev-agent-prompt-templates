@@ -4,12 +4,12 @@
 Add an API endpoint to retrieve payment status for an order. Improves order tracking and reduces support queries.
 
 ## Acceptance Criteria
-- Endpoint: GET `/payments/:orderId/status`
-- Returns JSON `{ orderId, status, lastUpdated }`
+- Endpoint: GET `/payments/:paymentId/status`
+- Returns JSON `{ paymentId, status, lastUpdated }`
 - Requires authentication; respond 401 if missing
 - SLA: P95 < 200ms
 
-## Primary Modules
+## Technical Context
 - `/routes/payments.js`
 - `/controllers/paymentController.js`
 - `/services/paymentService.js`
